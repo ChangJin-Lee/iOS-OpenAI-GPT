@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C78B2ED2A597023005FD733 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C78B2EC2A597023005FD733 /* OpenAI */; };
-		7C78B30B2A5C36DE005FD733 /* gptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C78B30A2A5C36DE005FD733 /* gptModel.swift */; };
+		7C78B30B2A5C36DE005FD733 /* gptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C78B30A2A5C36DE005FD733 /* gptViewModel.swift */; };
 		7CAA87962A596F520077B2B7 /* packageTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA87952A596F520077B2B7 /* packageTestApp.swift */; };
 		7CAA87982A596F520077B2B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA87972A596F520077B2B7 /* ContentView.swift */; };
 		7CAA879A2A596F530077B2B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CAA87992A596F530077B2B7 /* Assets.xcassets */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C78B30A2A5C36DE005FD733 /* gptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptModel.swift; sourceTree = "<group>"; };
+		7C78B30A2A5C36DE005FD733 /* gptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptViewModel.swift; sourceTree = "<group>"; };
 		7CAA87922A596F520077B2B7 /* packageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = packageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAA87952A596F520077B2B7 /* packageTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageTestApp.swift; sourceTree = "<group>"; };
 		7CAA87972A596F520077B2B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 				7CAA87972A596F520077B2B7 /* ContentView.swift */,
 				7CAA87992A596F530077B2B7 /* Assets.xcassets */,
 				7CAA879B2A596F530077B2B7 /* Preview Content */,
-				7C78B30A2A5C36DE005FD733 /* gptModel.swift */,
+				7C78B30A2A5C36DE005FD733 /* gptViewModel.swift */,
 			);
 			path = packageTest;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CAA87982A596F520077B2B7 /* ContentView.swift in Sources */,
-				7C78B30B2A5C36DE005FD733 /* gptModel.swift in Sources */,
+				7C78B30B2A5C36DE005FD733 /* gptViewModel.swift in Sources */,
 				7CAA87962A596F520077B2B7 /* packageTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

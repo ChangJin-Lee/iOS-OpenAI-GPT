@@ -11,6 +11,8 @@ import OpenAI
 struct ContentView: View {
     @State var queryComment = ""
     @State var queryAnswer  = ""
+    @StateObject private var viewModel = gptViewModel()
+
     let openAI = OpenAI(apiToken: "")
     let zeddQueue = DispatchQueue(label: "zedd", attributes: .concurrent)
 
@@ -25,7 +27,7 @@ struct ContentView: View {
                 .font(.headline)
 
             Button{
-                MyGpt().queryGPT()
+                MyGpt().queryGPT(viewModel: viewModel)
             }label: {
                 Text("button")
             }
@@ -35,7 +37,8 @@ struct ContentView: View {
 
             Button{
 
-                print("")
+                print("\(viewModel.getMessage())")
+                queryAnswer = viewModel.getMessage()
 
             }label:{
                 Text("button2")
@@ -52,8 +55,8 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct MyGpt {
-    func queryGPT() {
-        let configuration = OpenAI.Configuration(token: "", organizationIdentifier: "", timeoutInterval: 60.0)
+    func queryGPT(viewModel: gptViewModel) {
+        let configuration = OpenAI.Configuration(token: "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", organizationIdentifier: "org-PP9spEqwN8rVMz3vUJuuufMn", timeoutInterval: 60.0)
         let openAI = OpenAI(configuration: configuration)
         let customPrompt = """
 **( 영수증**
@@ -162,6 +165,7 @@ struct MyGpt {
             switch partialResult {
             case .success(let result):
                 if let res = result.choices.first?.delta.content{
+                    viewModel.setMessage(value: res)
                     stringArray.append(res)
                 }
             case .failure(let error):
